@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, calc(307px + 1.5vw));
+  grid-template-rows: 500px;
+}
+
+.sedan {
+  background-color: hsl(31deg, 77%, 52%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-inline: 50px;
+  border-radius: 20px 0 0 20px;
+}
+.sedan img {
+  min-height: 40px;
+  width: 65px;
+}
+.sedan button {
+  color: hsl(31deg, 77%, 52%);
+}
+
+.suv {
+  background-color: hsl(184deg, 100%, 22%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-inline: 50px;
+}
+.suv img {
+  min-height: 40px;
+  width: 65px;
+}
+.suv button {
+  color: hsl(184deg, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179deg, 100%, 13%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-inline: 50px;
+  border-radius: 0 20px 20px 0;
+}
+.luxury img {
+  min-height: 40px;
+  width: 65px;
+}
+.luxury button {
+  color: hsl(179deg, 100%, 13%);
+}
+
+.car-name {
+  color: white;
+  font-size: minmax(calc(2.125rem + 1.5vw), 5rem);
+}
+
+.car-description {
+  font-size: minmax(calc(0.875rem + 1.5vw), 1rem);
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+.learn-more-btn {
+  min-height: 40px;
+  width: 145px;
+  border: none;
+  border-radius: 30px;
+}
+.learn-more-btn:hover {
+  border: 2px solid hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 95%);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 940px) {
+  main {
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(3, 100vh);
+  }
+  .sedan,
+.suv,
+.luxury {
+    border-radius: 0;
+  }
+  .sedan img,
+.suv img,
+.luxury img {
+    width: minmax(65px, 130px);
+    min-height: minmax(40px, 80px);
+  }
+  .car-name {
+    font-size: calc(2.125rem + 1.5vw);
+  }
+  .car-description {
+    font-size: calc(0.875rem + 1.5vw);
+  }
+}/*# sourceMappingURL=styles.css.map */
